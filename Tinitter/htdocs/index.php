@@ -17,5 +17,7 @@ $app = new \Slim\Slim([
 // slim‚Éƒ‹[ƒg‚ğ“o˜^
 \Tinitter\Route::registration($app);
 
+$app->post('/post/commit', '\Tinitter\Controller\Post::commit');
+
 // Às
 $app->run();
