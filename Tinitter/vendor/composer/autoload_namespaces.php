@@ -6,16 +6,22 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'stringEncode' => array($vendorDir . '/paquettg/string-encode/src'),
+    'Uzulla\\MockSlimClient' => array($vendorDir . '/uzulla/mockslimclient/lib'),
     'Twig_Extensions_' => array($vendorDir . '/slim/extras/Views/Extension'),
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
+    'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
     'Slim\\Views' => array($vendorDir . '/slim/views'),
     'Slim\\Extras' => array($vendorDir . '/slim/extras'),
     'Slim' => array($vendorDir . '/slim/slim'),
     'Respect\\Validation' => array($vendorDir . '/respect/validation/library'),
+    'PHPHtmlParser' => array($vendorDir . '/paquettg/php-html-parser/src'),
     'Illuminate\\Support' => array($vendorDir . '/illuminate/support'),
     'Illuminate\\Events' => array($vendorDir . '/illuminate/events'),
     'Illuminate\\Database' => array($vendorDir . '/illuminate/database'),
     'Illuminate\\Container' => array($vendorDir . '/illuminate/container'),
+    'Faker\\PHPUnit' => array($vendorDir . '/fzaninotto/faker/test'),
+    'Faker' => array($vendorDir . '/fzaninotto/faker/src'),
     'Carbon' => array($vendorDir . '/nesbot/carbon/src'),
     '' => array($baseDir . '/lib'),
 );

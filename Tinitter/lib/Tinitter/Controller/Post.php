@@ -9,7 +9,10 @@ class Post
 	{
 		$app = \Slim\Slim::getInstance();
 		$params = $app->request->params();
+//		error_log(print_r($params, true));
+//		$app->log->debug(print_r($params,true));
 		$error_list = V_Post::byArray($params);
+//		error_log(__FILE__.":".__LINE__.">test error");
 		
 		if(empty($error_list)) {
 			$post = new M_Post;
