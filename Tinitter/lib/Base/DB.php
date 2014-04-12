@@ -2,7 +2,7 @@
 namespace Base;
 class DB
 {
-	// illuminate�̃f�[�^�x�[�X�ڑ��ݒ�ƃu�[�g�A�b�v
+	// illuminateのデータベース接続設定とブートアップ
 	static function registerIlluminate(array $settings)
 	{
 		$capsule = new \Illuminate\Database\Capsule\Manager;

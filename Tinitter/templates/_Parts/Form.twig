@@ -1,21 +1,21 @@
-ï»¿{% autoescape true %}
+{% autoescape true %}
 <div class="postform">
-	<h3>æŠ•ç¨¿ãƒ•ã‚©ãƒ¼ãƒ </h3>
+	<h3>“ŠeƒtƒH[ƒ€</h3>
 	<form method="post" action="/post/commit">
-
+		<input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
 		<div class="form-group {% if error_list.nickname %}has-error{% endif %}">
-			<label>ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ <em>ï¼ˆåŠè§’è‹±æ•°16æ–‡å­—ã¾ã§ï¼‰</em></label><br>
-			<input type="text" name="nickname" value="{{ params.nickname }}" placeholder="ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„" class="form-control">
+			<label>ƒjƒbƒNƒl[ƒ€<em>i”¼Šp‰p”16•¶š‚Ü‚Åj</em></label><br>
+			<input type="text" name="nickname" value="{{ param.nickname }}" placeholder="ƒjƒbƒNƒl[ƒ€‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢" class="form-control">
 			<p class="text-warning">{{error_list.nickname}}</p>
 		</div>
-
+		
 		<div class="form-group {% if error_list.body %}has-error{% endif %}">
-			<label>ãƒ†ã‚­ã‚¹ãƒˆ<em>ï¼ˆ1000æ–‡å­—ã¾ã§ï¼‰</em></label>
-			<textarea name="body" placeholder="æœ¬æ–‡ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„" class="form-control">{{params.body}}</textarea>
+			<label>ƒeƒLƒXƒg<em>i1000•¶š‚Ü‚Åj</em></label>
+			<textarea name="body" placeholder="–{•¶‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢" class="form-control">{{params.body}}</textarea>
 			<p class="text-warning">{{error_list.body}}</p>
 		</div>
-
-		<input type="submit" class="btn btn-primary btn-block" value="æŠ•ç¨¿ã™ã‚‹">
+		
+		<input type="submit" class="btn btn-primary btn-block" value="“Še‚·‚é">
 	</form>
 </div>
 {% endautoescape %}

@@ -1,23 +1,24 @@
 <?php
-// ƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Ç‚İ‚İ
+// ã‚»ãƒƒã‚·ãƒ§ãƒ³é–‹å§‹
+session_start();
+
+// ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®èª­ã¿è¾¼ã¿
 require '../vendor/autoload.php';
 
-// İ’èƒtƒ@ƒCƒ‹‚Ì“Ç
+// è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã®èª­è¾¼
 require __DIR__.'/../config.php';
 
-// ƒf[ƒ^ƒx[ƒXÚ‘±‚ÌƒZƒbƒgƒAƒbƒv
+// ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶šã®ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—
 \Base\DB::registerIlluminate($db_settings);
 
-// slim‚Ì‰Šú‰»
+// slimã®åˆæœŸåŒ–
 $app = new \Slim\Slim([
 	'templates.path' => TEMPLATES_DIR_PATH,
 	'view' => new \Slim\Views\Twig()
 ]);
 
-// slim‚Éƒ‹[ƒg‚ğ“o˜^
+// slimã«ãƒ«ãƒ¼ãƒˆã‚’ç™»éŒ²
 \Tinitter\Route::registration($app);
 
-$app->post('/post/commit', '\Tinitter\Controller\Post::commit');
-
-// Às
+// å®Ÿè¡Œ
 $app->run();
