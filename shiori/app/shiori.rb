@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'active_record'
 require 'will_paginate'
 require_relative 'models/bookmark'
+require_relative 'db'
 
 class Shiori < Sinatra::Base
 
@@ -9,7 +10,7 @@ class Shiori < Sinatra::Base
 
 	set :public_folder, File.expand_path(File.join(root, '..', 'public'))
 	
-	#View‚Å—˜—p‚·‚éƒwƒ‹ƒp[ƒƒ\ƒbƒhŒQ
+	#Viewã§åˆ©ç”¨ã™ã‚‹ãƒ˜ãƒ«ãƒ‘ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰ç¾¤
 	helpers do
 		def h(text)
 			Rack::Utils.escape_html(text)
@@ -17,10 +18,14 @@ class Shiori < Sinatra::Base
 	end
 
 	configure do
-		db_path = File.expand_path(File.join(root, '..', 'db', 'sqlite.db'))
-		ActiveRecord::Base.establish_connection(
-			adapter: 'sqlite3',
-			database: db_path
+		#db_path = File.expand_path(File.join(root, '..', 'db', 'sqlite.db'))
+		#ActiveRecord::Base.establish_connection(
+		#	adapter: 'sqlite3',
+		#	database: db_path
+		#)
+		DB.connect(
+			File.expand_path(File.join(root, '..')),
+			ENV['RACK_ENV']
 		)
 	end
 
@@ -36,11 +41,11 @@ class Shiori < Sinatra::Base
 	
 	post '/create' do
 		begin
-			# ƒf[ƒ^‚ğ•Û‘¶‚µ‚½ê‡‚Í'/'‚ÖƒŠƒ_ƒCƒŒƒNƒg
+			# ãƒ‡ãƒ¼ã‚¿ã‚’ä¿å­˜ã—ãŸå ´åˆã¯'/'ã¸ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ
 			Bookmark.create!(url: params[:url])
 			redirect '/'
 		rescue ActiveRecord::RecordInvalid => e
-			# ƒf[ƒ^‚Ì•Û‘¶‚É¸”s‚µ‚½‚çÄ“x“o˜^‰æ–Ê‚ğ•`‰æ
+			# ãƒ‡ãƒ¼ã‚¿ã®ä¿å­˜ã«å¤±æ•—ã—ãŸã‚‰å†åº¦ç™»éŒ²ç”»é¢ã‚’æç”»
 			@bookmark = e.record
 			erb :new
 		end

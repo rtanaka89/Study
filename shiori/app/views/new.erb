@@ -12,6 +12,8 @@
 
 <form method="post" action="/create">
 	<div class="form-group">
+		<input name="authenticity_token" value="<%= h session[:csrf] %>"
+			type="hidden" />
 		<label for="url">URL</label>
 		<input type="text" class="form-control" 
 			id="url" name="url" placeholder="Enter URL">
