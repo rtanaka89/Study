@@ -1,0 +1,185 @@
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<h2>ドロップダウンメニュー</h2>
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+				ドロップダウンメニュ
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+				<li role="presentation" class="dropdown-header">ファイル操作</li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">新規ファイル</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">保存</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">共有</a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">削除</a></li>
+			</ul>
+		</div>
+		
+		<h2>ボタングループ</h2>
+		<div class="btn-group">
+			<button type="button" class="btn btn-default">左</button>
+			<button type="button" class="btn btn-default">中央</button>
+			<button type="button" class="btn btn-default">右</button>
+		</div>
+		
+		<h2>ボタンツールバー</h2>
+		<div class="btn-toolbar" role="toolbar">
+			<div class="btn-group">
+				<button type="button" class="btn btn-default">1</button>
+				<button type="button" class="btn btn-default">2</button>
+				<button type="button" class="btn btn-default">3</button>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default">1</button>
+				<button type="button" class="btn btn-default">2</button>
+				<button type="button" class="btn btn-default">3</button>
+				<button type="button" class="btn btn-default">4</button>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default">1</button>
+			</div>
+		</div>
+		
+		<h2>ボタングループのサイズ</h2>
+		<div class="btn-group btn-group-lg">
+			<button type="button" class="btn btn-default">左</button>
+			<button type="button" class="btn btn-default">中央</button>
+			<button type="button" class="btn btn-default">右</button>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn btn-default">左</button>
+			<button type="button" class="btn btn-default">中央</button>
+			<button type="button" class="btn btn-default">右</button>
+		</div>
+		<div class="btn-group btn-group-sm">
+			<button type="button" class="btn btn-default">左</button>
+			<button type="button" class="btn btn-default">中央</button>
+			<button type="button" class="btn btn-default">右</button>
+		</div>
+		<div class="btn-group btn-group-xs">
+			<button type="button" class="btn btn-default">左</button>
+			<button type="button" class="btn btn-default">中央</button>
+			<button type="button" class="btn btn-default">右</button>
+		</div>
+		
+		<h2>ボタングループにドロップダウンメニューをネストする</h2>
+		<div class="btn-group">
+			<button type="button" class="btn btn-default">壱</button>
+			<button type="button" class="btn btn-default">弐</button>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					ドロップダウン
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">参</a></li>
+					<li><a href="#">四</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<h2>縦並びのボタングループ</h2>
+		<div class="btn-group-vertical">
+			<button type="button" class="btn btn-default">序</button>
+			<button type="button" class="btn btn-default">破</button>
+			<button type="button" class="btn btn-default">Q</button>
+		</div>
+		
+		<h2>ジャストフィットボタングループ</h2>
+		<p>a要素は親要素にbtn-group-justifiedを追加するだけ</p>
+		<div class="btn-group btn-group-justified">
+			<a href="#" class="btn btn-default">い</a>
+			<a href="#" class="btn btn-default">ろ</a>
+			<a href="#" class="btn btn-default">は</a>
+		</div>
+		<p>button要素は個別のbutton要素に対してbtn-groupでラップした上で、btn-group-justifiedを使う</p>
+		<div class="btn-group btn-group-justified">
+			<div class="btn-group">
+				<button type="button" class="btn btn-default">い</button>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default">ろ</button>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default">は</button>
+			</div>
+		</div>
+		
+		<h2>ナビゲーション</h2>
+		<ul class="nav [デザインごとのclass]">
+			<li class="active"><a href="#">ホーム</a></li>
+			<li><a href="#">プロフィール</a></li>
+			<li><a href="#">メッセージ</a></li>
+		</ul>
+		
+		<h2>タブ型ナビゲーション</h2>
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#">ホーム</a></li>
+			<li><a href="#">プロフィール</a></li>
+			<li><a href="#">メッセージ</a></li>
+		</ul>
+		
+		<h2>ピル型ナビゲーション</h2>
+		<ul class="nav nav-pills">
+			<li class="active"><a href="#">ホーム</a></li>
+			<li><a href="#">プロフィール</a></li>
+			<li><a href="#">メッセージ</a></li>
+		</ul>
+		
+		<h2>ピル型ナビゲーションを縦積みする</h2>
+		<ul class="nav nav-pills nav-stacked">
+			<li class="active"><a href="#">ホーム</a></li>
+			<li><a href="#">プロフィール</a></li>
+			<li><a href="#">メッセージ</a></li>
+		</ul>
+		
+		<h2>ナビゲーションを両端詰めにする
+		<ul class="nav nav-pills nav-justified">
+			<li class="active"><a href="#">ホーム</a></li>
+			<li><a href="#">プロフィール</a></li>
+			<li><a href="#">メッセージ</a></li>
+		</ul>
+		
+		<h2>ナビゲーションの中にドロップダウンメニューを入れる</h2>
+		<ul class="nav nav-pills">
+			<li class="active"><a href="#">ホーム</a></li>
+			<li><a href="#">プロフィール</a></li>
+			<li><a href="#">メッセージ</a></li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				ドロップダウンメニュ
+				<span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+					<li role="presentation" class="dropdown-header">ファイル操作</li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">新規ファイル</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">保存</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">共有</a></li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">削除</a></li>
+				</ul>
+			</li>
+		</ul>
+		
+		<h2>ジャンボトロン</h2>
+		<div class="jumbotron">
+			<h1>2001年宇宙の旅</h1>
+			<p> ... </p>
+			<p><a class="btn btn-primary btn-lg" role="button">続きを読む</a></p>
+		</div>
+		
+		<h2>ページヘッダー</h2>
+		<div class="page-header">
+			<h1>美しい乾物活用法<small>ふえる超銀河わかめを有効活用</small></h1>
+		</div>
+	</body>
+</html>
